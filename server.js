@@ -20,4 +20,6 @@ function outputMessage(message) {
       ${message}
     </p>
     `
+
+  document.querySelector('.chat-messages').appendChild(div)
 }
