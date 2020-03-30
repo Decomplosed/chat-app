@@ -5,6 +5,8 @@ const socket = io()
 
 socket.on('message', message => {
   outputMessage(message)
+
+  chatMessages.scrollTop = chatMessages.scrollHeight
 })
 
 chatForm.addEventListener('submit', e => {
