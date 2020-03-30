@@ -15,7 +15,10 @@ const botName = 'ChatCord Bot'
 io.on('connection', socket => {
   socket.emit('message', formatMessage(botName, 'Welcome to ChatCord'))
 
-  socket.broadcast.emit('message', 'A user has joined the chat')
+  socket.broadcast.emit(
+    botName,
+    formatMessage(botName, 'A user has joined the chat')
+  )
 
   socket.on('disconnect', () => {
     io.emit('message', 'A user has left the chat')
