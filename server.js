@@ -16,6 +16,7 @@ io.on('connection', socket => {
   socket.emit('message', formatMessage(botName, 'Welcome to ChatCord'))
 
   socket.broadcast.emit(
+    'message',
     botName,
     formatMessage(botName, 'A user has joined the chat')
   )
