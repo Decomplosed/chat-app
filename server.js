@@ -17,7 +17,7 @@ function outputMessage(message) {
   div.innerHTML = `
     <p class='meta>Brad <span>9:12pm</span></p>
     <p class='text>
-      Blah blah blag blah blag blah blag blah blag blah blag blah blag
+      ${message}
     </p>
     `
 }
