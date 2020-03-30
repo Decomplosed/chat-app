@@ -1,4 +1,5 @@
 const chatForm = document.getElementById('chat-form')
+const chatMessages = document.querySelector('.chat-messages')
 
 const socket = io()
 
