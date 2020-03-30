@@ -10,3 +10,14 @@ const PORT = 3000 || process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
+
+function outputMessage(message) {
+  const div = document.createElement('div')
+  div.classList.add('message')
+  div.innerHTML = `
+    <p class='meta>Brad <span>9:12pm</span></p>
+    <p class='text>
+      Blah blah blag blah blag blah blag blah blag blah blag blah blag
+    </p>
+    `
+}
