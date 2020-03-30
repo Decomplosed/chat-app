@@ -22,7 +22,7 @@ io.on('connection', socket => {
   )
 
   socket.on('disconnect', () => {
-    io.emit('message', 'A user has left the chat')
+    io.emit('message', formatMessage(botName, 'A user has left the chat'))
   })
 
   socket.on('chatMessage', msg => {
