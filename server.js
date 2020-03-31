@@ -26,7 +26,7 @@ io.on('connection', socket => {
       .emit(
         'message',
         botName,
-        formatMessage(botName, 'A user has joined the chat')
+        formatMessage(botName, `${user.username} has joined the chat`)
       )
   })
 
