@@ -13,6 +13,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 const botName = 'ChatCord Bot'
 
 io.on('connection', socket => {
+  socket.on('joinRoom', ({username, room}) => {
+    
+  })
+
   socket.emit('message', formatMessage(botName, 'Welcome to ChatCord'))
 
   socket.broadcast.emit(
