@@ -21,11 +21,13 @@ io.on('connection', socket => {
 
     socket.emit('message', formatMessage(botName, 'Welcome to ChatCord'))
 
-    socket.broadcast.emit(
-      'message',
-      botName,
-      formatMessage(botName, 'A user has joined the chat')
-    )
+    socket.broadcast
+      .to(user.room)
+      .emit(
+        'message',
+        botName,
+        formatMessage(botName, 'A user has joined the chat')
+      )
   })
 
   socket.on('chatMessage', msg => {
