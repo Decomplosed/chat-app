@@ -26,5 +26,6 @@ function userLeave(id) {
 
 module.exports = {
   userJoin,
-  getCurrentUser
+  getCurrentUser,
+  userLeave
 }
