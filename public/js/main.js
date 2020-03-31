@@ -1,6 +1,12 @@
 const chatForm = document.getElementById('chat-form')
 const chatMessages = document.querySelector('.chat-messages')
 
+const { username, room } = Qs.parse(location.search, {
+  ignoreQueryPrexif: true
+})
+
+console.log(username, room)
+
 const socket = io()
 
 socket.on('message', message => {
